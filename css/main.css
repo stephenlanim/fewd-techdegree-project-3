@@ -1,0 +1,296 @@
+/* ======================================
+  Online Registration Form Styles
+========================================= */
+
+/* ~~~~~~~~~~ Basic Styles ~~~~~~~~~~ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #000;
+  font-family: "Merriweather", serif;
+  font-size: 1.2em;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+/* ~~~~~~~~~~ Layout Styles ~~~~~~~~~~ */
+
+/* ~~~~~~~~~~ Site Header Section ~~~~~~~~~~ */
+
+header {
+  background-color: #2d3945;
+  color: #fff;
+  font-variant-caps: all-small-caps;
+  padding: 2em;
+  text-align: center;
+}
+
+/* ~~~~~~~~~~ Page Header Section ~~~~~~~~~~ */
+
+.page-header {
+  border-bottom: 7px solid #2d3945;
+  font-size: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2em;
+  padding: 2em 1em;
+  position: relative;
+  text-align: center;
+  width: 90%;
+}
+
+/* Insert second, thin border after page header */
+.page-header::after {
+  background: none;
+  border-bottom: 3px solid #2d3945;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: -16px;
+}
+
+.page-header p {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* ~~~~~~~~~~ All Form Sections ~~~~~~~~~~ */
+
+.container {
+  background-color: #fff;
+}
+
+h2,
+h3,
+legend {
+  color: #2d3945;
+}
+
+form {
+  padding: 1em;
+  width: 100%;
+}
+
+fieldset {
+  border: 0;
+}
+
+legend {
+  font-size: 1.4em;
+  font-weight: 700;
+}
+
+label {
+  color: #46698b;
+  margin-top: 1em;
+}
+
+input {
+  border: 0;
+  color: #53595f;
+}
+
+/* Push label away from checkbox and radio input */
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 1.2em;
+}
+
+/* Make checkbox and radio input label bold when checked */
+input:checked + label {
+  font-weight: 700;
+}
+
+/* Right-align placeholder text only (not user input) */
+input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+  font-style: italic;
+  text-align: right;
+}
+
+select {
+  color: rgba(0, 0, 0, 0.4);
+  height: 3em;
+  text-align: left;
+}
+
+option {
+  font-family: inherit;
+}
+
+textarea {
+  color: #53595f;
+  padding: 0.75em;
+  resize: none;
+}
+
+textarea,
+select {
+  background-color: #eff0f1;
+  border: 0;
+  border-radius: 3px;
+  display: block;
+  font-family: inherit;
+  font-size: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  width: 100%;
+}
+
+input,
+textarea {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Create navy-blue border around text fields when clicked */
+input:focus,
+textarea:focus {
+  background-color: #fefefe;
+  border: 2px solid #46698b;
+}
+
+button[type="submit"] {
+  background-color: #4ebbb5;
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  font-family: inherit;
+  font-size: 1.75em;
+  padding: 1.25em;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.25s ease-in-out;
+  width: 100%;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+  background-color: #40a5a0;
+  transform: scale(0.96);
+}
+
+button[type="submit"]:active {
+  transform: scale(0.92);
+}
+
+/* ~~~~~~~~~~ Contact Info Form Section ~~~~~~~~~~ */
+
+.fs-contact {
+  border-bottom: 3px solid #2d3945;
+  margin-bottom: 2em;
+}
+
+.fs-contact label {
+  display: block;
+}
+
+.fs-contact input {
+  background-color: #eff0f1;
+  border-radius: 3px;
+  display: block;
+  font-family: inherit;
+  font-size: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: 0.75em 1.2em;
+  width: 100%;
+}
+
+input#zip {
+  width: 50%;
+}
+
+/* ~~~~~~~~~~ Newsletter Form Section ~~~~~~~~~~ */
+
+.fs-news {
+  line-height: 2;
+}
+
+.news-label {
+  display: block;
+  line-height: 1.5;
+}
+
+label[for="other_topics"] {
+  display: block;
+  width: max-content;
+}
+
+/* ~~~~~~~~~~ Footer ~~~~~~~~~~ */
+
+footer {
+  color: rgba(0, 0, 0, 0.5);
+  font-style: italic;
+  margin-top: 0;
+  padding-top: 0;
+  padding-bottom: 3em;
+  text-align: center;
+}
+
+/*  === For tablet up ===  */
+@media only screen and (min-width: 768px) {
+  main {
+    background-color: #46698b;
+    margin:0;
+  }
+
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+
+  .page-header {
+    width: 92%;
+  }
+
+  .fs-contact input,
+  .fs-contact select {
+    display: inline-block;
+    width: 70%;
+  }
+
+  .fs-contact label {
+    display: inline-block;
+    width: 25%;
+  }
+
+  input#zip {
+    width: 25%;
+  }
+
+  button[type="submit"] {
+    font-size: 1.2em;
+    padding: 0.6em;
+  }
+
+  button[type="submit"]:hover,
+  button[type="submit"]:focus {
+    transform: scale(0.98);
+  }
+
+  button[type="submit"]:active {
+    transform: scale(0.96);
+  }
+
+  footer {
+    background-color: #46698b;
+    margin:0;
+  }
+
+  footer .container {
+    border: 1px solid #fff;
+    padding-bottom: 3em;
+  }
+
+}
